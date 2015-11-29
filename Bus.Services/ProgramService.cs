@@ -90,14 +90,14 @@ namespace TVHS.Services
             if (_iWorkbook != null)
             {
                 string programCodeTabName = ConfigurationManager.AppSettings["ProgramCodeTabName"];
+                // get anchor STT
+                string headerRowKey = ConfigurationManager.AppSettings["HeaderRowKey"];
                 for (int i = 0; i < _iWorkbook.NumberOfSheets; i++)
                 {
                     if (_iWorkbook.GetSheetName(i).ToLower().Contains(programCodeTabName.ToLower()))
                     {
                         ISheet sheet = _iWorkbook.GetSheetAt(i);
-                        List<Program> listProgram = new List<Program>();
-                        // get anchor STT
-                        string headerRowKey = ConfigurationManager.AppSettings["HeaderRowKey"];
+                        List<Program> listProgram = new List<Program>();                      
                         List<int> target = _iHelper.StartPoint(sheet, headerRowKey);
                         if (target != null)
                         {
@@ -110,63 +110,20 @@ namespace TVHS.Services
                                     int index = target.LastOrDefault();
                                     if ((row.GetCell(index + 3) != null))
                                     {
-                                        if (row.GetCell(index + 1) != null)
-                                        {
-                                            program.Name = row.GetCell(index + 1).StringCellValue.ToString();
-                                        }
-                                        else
-                                        {
-                                            program.Name = "";
-                                        }
-                                        if (row.GetCell(index + 2) != null)
-                                        {
-                                            program.Duration = "0:" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Minute.ToString() + ":" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Second.ToString();
-                                        }
-                                        else
-                                        {
-                                            program.Duration = "";
-                                        }
+                                        program.Name = row.GetCell(index + 1) != null?row.GetCell(index + 1).StringCellValue.ToString():"";                                        
+                                        program.Duration = row.GetCell(index + 2) != null ? "0:" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Minute.ToString() + ":" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Second.ToString() : "";                                
                                         program.ProgramCode = row.GetCell(index + 3).StringCellValue.ToString();
-                                       
-                                        if (row.GetCell(index + 4) != null)
-                                        {
-                                            program.Note = row.GetCell(index + 4).StringCellValue.ToString();
-                                        }
-                                        else
-                                        {
-                                            program.Note = "";
-                                        }
+                                        program.Note = row.GetCell(index + 4) != null ? row.GetCell(index + 4).StringCellValue.ToString() : "";                                    
                                         // add more
-                                        if (row.GetCell(index + 7) != null)
-                                        {
-                                            program.Category = row.GetCell(index + 7).StringCellValue.ToString();
-                                        }
-                                        else
-                                        {
-                                            program.Category = "";
-                                        }
-
-                                        if (row.GetCell(index + 8) != null)
-                                        {
-                                            program.Price = Convert.ToInt32(row.GetCell(index + 8).NumericCellValue.ToString());
-                                        }
-                                        else
-                                        {
-                                            program.Price = null;
-                                        }
-                                    }
-
-                                    
+                                        program.Category = row.GetCell(index + 7) != null ? row.GetCell(index + 7).StringCellValue.ToString() : "";                                     
+                                        program.Price = row.GetCell(index + 8) != null ? Convert.ToInt32(row.GetCell(index + 8).NumericCellValue.ToString()) : 0;                                      
+                                    }                                   
                                     var existProgram = _iProgramRepository.All.Where(x => x.ProgramCode == program.ProgramCode).FirstOrDefault();
                                     if (existProgram != null)
                                     {
                                         program.Id = existProgram.Id;
                                     }
                                     _iProgramRepository.InsertOrUpdate(program);                                   
-                                }
-                                else
-                                {
-                                    break;
                                 }
                             }
                             _iProgramRepository.Save();

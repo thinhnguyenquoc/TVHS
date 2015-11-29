@@ -2,3 +2,8 @@ E:\TVHSWeb\Bus.ViewModels\bin\Debug\TVHS.ViewModels.dll
 E:\TVHSWeb\Bus.ViewModels\bin\Debug\TVHS.ViewModels.pdb
 E:\TVHSWeb\Bus.ViewModels\obj\Debug\TVHS.ViewModels.dll
 E:\TVHSWeb\Bus.ViewModels\obj\Debug\TVHS.ViewModels.pdb
+E:\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.dll
+E:\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.pdb
+E:\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.dll
+E:\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.pdb
+E:\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.csprojResolveAssemblyReference.cache
