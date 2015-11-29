@@ -13,7 +13,7 @@ namespace TVHS.Entities.Mapping
         {
             this.ToTable("Sale");
             this.HasKey(x => x.Id);
-            this.Property(x => x.ProgramCode).HasColumnName("ProgramCode");
+            this.Property(x => x.ProductCode).HasColumnName("ProductCode");
             this.Property(x => x.Quantity).HasColumnName("Quantity");
             this.Property(x => x.Date).HasColumnName("Date");
         }
