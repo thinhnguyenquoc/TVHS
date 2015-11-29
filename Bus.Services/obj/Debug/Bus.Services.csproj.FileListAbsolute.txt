@@ -1,0 +1,103 @@
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Services.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Autofac.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\AutoMapper.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\EntityFramework.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Entities.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Repositories.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Autofac.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\AutoMapper.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\EntityFramework.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\obj\Debug\Bus.Services.csprojResolveAssemblyReference.cache
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\obj\Debug\Bus.Services.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.ViewModels.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Services.dll.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Services.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Entities.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\bin\Debug\Bus.Repositories.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Services\obj\Debug\Bus.Services.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\obj\Debug\Bus.Services.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\obj\Debug\Bus.Services.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Services.dll.config
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Services.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Services.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Autofac.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\AutoMapper.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Entities.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Repositories.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\EntityFramework.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Entities.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.Repositories.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Bus.ViewModels.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Autofac.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\AutoMapper.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\EntityFramework.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Services\obj\Debug\Bus.Services.pdb
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Services.dll.config
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Services.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Services.pdb
+E:\TVHSWeb\Bus.Services\bin\Debug\Autofac.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Autofac.Integration.Mvc.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\AutoMapper.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Entities.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Repositories.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.ViewModels.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\EntityFramework.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\EntityFramework.SqlServer.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Helpers.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Mvc.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Razor.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.Razor.dll
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Entities.pdb
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.Repositories.pdb
+E:\TVHSWeb\Bus.Services\bin\Debug\Bus.ViewModels.pdb
+E:\TVHSWeb\Bus.Services\bin\Debug\Autofac.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\Autofac.Integration.Mvc.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\AutoMapper.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\EntityFramework.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\EntityFramework.SqlServer.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Helpers.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Mvc.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.Razor.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\TVHSWeb\Bus.Services\bin\Debug\System.Web.WebPages.Razor.xml
+E:\TVHSWeb\Bus.Services\obj\Debug\Bus.Services.csprojResolveAssemblyReference.cache
+E:\TVHSWeb\Bus.Services\obj\Debug\Bus.Services.dll
+E:\TVHSWeb\Bus.Services\obj\Debug\Bus.Services.pdb

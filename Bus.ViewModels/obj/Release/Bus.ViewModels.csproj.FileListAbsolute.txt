@@ -1,0 +1,10 @@
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.dll.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\obj\Release\Bus.ViewModels.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\obj\Release\Bus.ViewModels.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.dll.config
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Release\Bus.ViewModels.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\obj\Release\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\obj\Release\Bus.ViewModels.pdb

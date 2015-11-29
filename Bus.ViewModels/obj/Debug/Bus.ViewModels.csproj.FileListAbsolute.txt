@@ -1,0 +1,22 @@
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\obj\Debug\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Bus.ViewModels.exe.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Bus.ViewModels.exe
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\bin\Bus.ViewModels.exe.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\bin\Bus.ViewModels.exe
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\bin\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.ViewModels\obj\Debug\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll.config
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\bin\Debug\Bus.ViewModels.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\obj\Debug\Bus.ViewModels.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.ViewModels\obj\Debug\Bus.ViewModels.pdb
+E:\TVHSWeb\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll.config
+E:\TVHSWeb\Bus.ViewModels\bin\Debug\Bus.ViewModels.dll
+E:\TVHSWeb\Bus.ViewModels\bin\Debug\Bus.ViewModels.pdb
+E:\TVHSWeb\Bus.ViewModels\obj\Debug\Bus.ViewModels.csprojResolveAssemblyReference.cache
+E:\TVHSWeb\Bus.ViewModels\obj\Debug\Bus.ViewModels.dll
+E:\TVHSWeb\Bus.ViewModels\obj\Debug\Bus.ViewModels.pdb

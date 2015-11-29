@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BusConnectionString-Web.config Connection String" description="BusConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=THINK;Initial Catalog=thongtinxebuyt_com_bus; Persist Security Info=True; User ID=sa; Password=sa;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\thinh\\Desktop\\Bus\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BusConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

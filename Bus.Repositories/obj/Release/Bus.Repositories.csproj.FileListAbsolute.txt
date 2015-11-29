@@ -1,0 +1,62 @@
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.dll.config
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Autofac.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Autofac.Integration.Mvc.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\AutoMapper.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Bus.Entities.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Helpers.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Mvc.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Razor.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Bus.Entities.pdb
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Autofac.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\Autofac.Integration.Mvc.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\AutoMapper.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Helpers.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Mvc.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.Razor.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.dll
+C:\Users\thinhnguyen.DICENTRAL\Documents\Visual Studio 2012\Projects\bus\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.dll.config
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Bus.Repositories.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Autofac.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Autofac.Integration.Mvc.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\AutoMapper.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Bus.Entities.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Helpers.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Mvc.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Razor.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Bus.Entities.pdb
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Autofac.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\Autofac.Integration.Mvc.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\AutoMapper.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Helpers.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Mvc.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.Razor.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.dll
+C:\Users\thinh\Desktop\Bus.Web\Bus.Repositories\obj\Release\Bus.Repositories.pdb
