@@ -38,9 +38,11 @@
     <Compile Include="AutofacMapper.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Interfaces\IHelper.cs" />
+    <Compile Include="Interfaces\ISaleService.cs" />
     <Compile Include="Interfaces\IScheduleService.cs" />
     <Compile Include="Interfaces\IProgramService.cs" />
     <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="SaleService.cs" />
     <Compile Include="ScheduleService.cs" />
     <Compile Include="ProgramService.cs" />
     <Compile Include="ModelMapper.cs" />

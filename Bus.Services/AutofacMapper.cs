@@ -34,6 +34,7 @@ namespace TVHS.Services
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
             builder.RegisterType<ProgramService>().As<IProgramService>().InstancePerRequest();
             builder.RegisterType<ScheduleService>().As<IScheduleService>().InstancePerRequest();
+            builder.RegisterType<SaleService>().As<ISaleService>().InstancePerRequest();
             builder.RegisterType<Helper>().As<IHelper>().InstancePerRequest();
             base.Load(builder);
         }
