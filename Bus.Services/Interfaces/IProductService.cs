@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TVHS.Services.Interfaces
 {
@@ -14,5 +15,6 @@ namespace TVHS.Services.Interfaces
         ViewModelProduct GetDetail(int Id);
         void InsertOrUpdate(ViewModelProduct vproduct);
         ViewModelProduct Delete(ViewModelProduct vproduct);
+        void AddProgramFromFile(Stream inputStream, string fileName);
     }
 }

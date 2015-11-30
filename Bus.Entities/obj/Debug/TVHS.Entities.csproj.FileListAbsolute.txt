@@ -52,4 +52,3 @@ E:\TVHS\Bus.Entities\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\TVHS\Bus.Entities\bin\Debug\System.Web.WebPages.Razor.xml
 E:\TVHS\Bus.Entities\obj\Debug\TVHS.Entities.dll
 E:\TVHS\Bus.Entities\obj\Debug\TVHS.Entities.pdb
-E:\TVHS\Bus.Entities\obj\Debug\TVHS.Entities.csprojResolveAssemblyReference.cache

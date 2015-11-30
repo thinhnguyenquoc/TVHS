@@ -21,10 +21,12 @@ namespace TVHS.Services
     {
         IProgramRepository _iProgramRepository;
         IHelper _iHelper;
-        public ProgramService(IProgramRepository iProgramRepository, IHelper iHelper)
+        IProductRepository _iProductRepository;
+        public ProgramService(IProgramRepository iProgramRepository, IHelper iHelper, IProductRepository iProductRepository)
         {
             _iProgramRepository = iProgramRepository;
             _iHelper = iHelper;
+            _iProductRepository = iProductRepository;
         }
         
         public List<ViewModelProgram> GetAllProgram()
@@ -40,10 +42,16 @@ namespace TVHS.Services
 
         public ViewModelProgram GetDetail(int Id)
         {
-            var result = _iProgramRepository.Find(Id);
+            var result = _iProgramRepository.Find(Id);            
             if (result != null)
             {
-                return Mapper.Map<Program, ViewModelProgram>(result);
+                var resultreturn = Mapper.Map<Program, ViewModelProgram>(result);
+                if (result.ProductId != null && result.ProductId != 0)
+                {
+                    var product = _iProductRepository.Find(result.ProductId);
+                    resultreturn.ProductName = product.Name;
+                }
+                return resultreturn;
             }
             return null;
         }

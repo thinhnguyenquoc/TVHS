@@ -9,15 +9,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using NPOI.HSSF.UserModel;
+using System.Configuration;
 
 namespace TVHS.Services
 {
     public class ProductService : IProductService
     {
         IProductRepository _iProductRepository;
-        public ProductService(IProductRepository iProductRepository)
+        IProgramRepository _iProgramRepository;
+        IHelper _iHelper;
+        public ProductService(IProductRepository iProductRepository, IHelper iHelper, IProgramRepository iProgramRepository)
         {
             _iProductRepository = iProductRepository;
+            _iHelper = iHelper;
+            _iProgramRepository = iProgramRepository;
         }
         
         public List<ViewModelProduct> GetAllProduct()
@@ -65,6 +74,70 @@ namespace TVHS.Services
             catch (Exception e)
             {
                 return null;
+            }
+        }
+
+        public void AddProgramFromFile(Stream inputStream, string fileName)
+        {
+            IWorkbook _iWorkbook = null;
+            if (fileName.Contains(".xlsx"))
+            {
+                _iWorkbook = new XSSFWorkbook(inputStream);
+            }
+            else if (fileName.Contains(".xls"))
+            {
+                _iWorkbook = new HSSFWorkbook(inputStream);
+            }
+
+            if (_iWorkbook != null)
+            {
+                string productCodeTabName = ConfigurationManager.AppSettings["ProductCodeTabName"];
+                // get anchor STT
+                string headerRowKey = ConfigurationManager.AppSettings["HeaderRowKey"];
+                for (int i = 0; i < _iWorkbook.NumberOfSheets; i++)
+                {
+                    if (_iWorkbook.GetSheetName(i).ToLower().Contains(productCodeTabName.ToLower()))
+                    {
+                        ISheet sheet = _iWorkbook.GetSheetAt(i);
+                        List<int> target = _iHelper.StartPoint(sheet, headerRowKey);
+                        if (target != null)
+                        {
+                            for (int j = target.FirstOrDefault() + 1; j <= sheet.LastRowNum; j++)
+                            {
+                                var row = sheet.GetRow(j);
+                                if (row.GetCell(target.LastOrDefault()) != null)
+                                {
+                                    string productname = row.GetCell(target.LastOrDefault() + 1).StringCellValue.ToString();
+                                    var product = _iProductRepository.All.Where(x => x.Name.Contains(productname)).FirstOrDefault();
+                                    List<string> mabanglist = new List<string>();
+                                    int k = target.LastOrDefault();
+                                    while (k <= row.LastCellNum)
+                                    {
+                                        if (row.GetCell(k + 2) != null) { 
+                                            var mabang = row.GetCell(k + 2).StringCellValue;
+                                            mabanglist.Add(mabang);
+                                            k += 2;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+                                    foreach (var item in mabanglist)
+                                    {
+                                        var program = _iProgramRepository.All.Where(x => x.ProgramCode == item).FirstOrDefault();
+                                        if (program != null)
+                                        {
+                                            program.ProductId = product.Id;
+                                            _iProgramRepository.InsertOrUpdate(program);
+                                        }
+                                    }
+                                }
+                                _iProgramRepository.Save();
+                            }
+                        }
+                    }
+                }
             }
         }
     }

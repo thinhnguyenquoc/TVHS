@@ -14,5 +14,6 @@ namespace TVHS.ViewModels
         public string Note { get; set; }
         public string Duration { get; set; }
         public int ProductId { get; set; }
+        public string ProductName { get; set; }
     }
 }

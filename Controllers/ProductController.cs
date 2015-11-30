@@ -1,6 +1,7 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -97,6 +98,26 @@ namespace TVHS.Web.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult Upload()
+        {
+            if (Request.Files.Count > 0)
+            {
+                var file = Request.Files[0];
+
+                if (file != null && file.ContentLength > 0)
+                {
+                    Stream fileStream = file.InputStream;
+                    var fileName = Path.GetFileName(file.FileName);
+                    _iProductService.AddProgramFromFile(fileStream, fileName);
+                    //var path = Path.Combine(Server.MapPath("~/Uploads/"), fileName);
+                    //file.SaveAs(path);
+                }
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

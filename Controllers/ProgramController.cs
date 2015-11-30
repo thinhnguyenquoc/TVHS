@@ -27,6 +27,7 @@ namespace TVHS.Web.Controllers
         public ActionResult Details(int id)
         {
             var result = _iProgramService.GetDetail(id);
+
             return View(result);
         }
 
