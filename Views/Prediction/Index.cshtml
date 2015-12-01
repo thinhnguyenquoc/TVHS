@@ -1,0 +1,12 @@
+﻿
+@using (Html.BeginForm("Predict", "Prediction", FormMethod.Post, null))
+{
+    <label>Program Code</label>
+    <input type="text" name="programCode" id="programCode"/>
+    <br />
+    <label>Time Frames</label>
+    <input type="text" name="timeframes" id="timeFrames"/>
+    <br />
+    
+    <input type="submit" name="Submit" id="Submit" value="Upload" />
+}

@@ -136,6 +136,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="Controllers\PredictionController.cs" />
     <Compile Include="Controllers\SaleController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,6 +164,8 @@
     <Content Include="Views\Program\Edit.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Sale\Index.cshtml" />
+    <Content Include="Views\Prediction\Index.cshtml" />
+    <Content Include="Views\Prediction\Predict.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
