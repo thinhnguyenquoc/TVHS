@@ -40,7 +40,11 @@
     <Compile Include="ViewModelProgram.cs" />
     <Compile Include="ViewModelSale.cs" />
     <Compile Include="ViewModelSchedule.cs" />
+    <Compile Include="ViewModelTimeFrame.cs" />
     <Compile Include="ViewModelTimeSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

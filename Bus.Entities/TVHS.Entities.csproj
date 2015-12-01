@@ -41,11 +41,13 @@
     <Compile Include="Mapping\ProgramMap.cs" />
     <Compile Include="Mapping\SaleMap.cs" />
     <Compile Include="Mapping\ScheduleMap.cs" />
+    <Compile Include="Mapping\TimeFrameMap.cs" />
     <Compile Include="Mapping\TimeSettingMap.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Sale.cs" />
     <Compile Include="Schedule.cs" />
+    <Compile Include="TimeFrame.cs" />
     <Compile Include="TimeSetting.cs" />
   </ItemGroup>
   <ItemGroup>

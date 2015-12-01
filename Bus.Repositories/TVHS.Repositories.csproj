@@ -35,6 +35,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="TimeFrameRepository.cs" />
+    <Compile Include="Interfaces\ITimeFrameRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\IScheduleRepository.cs" />
     <Compile Include="Interfaces\ITimeSettingRepository.cs" />

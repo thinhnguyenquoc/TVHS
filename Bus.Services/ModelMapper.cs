@@ -33,6 +33,8 @@ namespace TVHS.Services
             Mapper.CreateMap<ViewModelTimeSetting, TimeSetting>();
             Mapper.CreateMap<Product, ViewModelProduct>();
             Mapper.CreateMap<ViewModelProduct, Product>();
+            Mapper.CreateMap<TimeFrame, ViewModelTimeFrame>();
+            Mapper.CreateMap<ViewModelTimeFrame, TimeFrame>();
             mappingConfigured = true;
         }
 
