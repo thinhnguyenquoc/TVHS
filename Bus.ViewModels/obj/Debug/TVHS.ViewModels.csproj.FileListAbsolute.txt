@@ -10,3 +10,7 @@ D:\git\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.dll
 D:\git\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.pdb
 D:\git\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.dll
 D:\git\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.pdb
+E:\TVHS\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.dll
+E:\TVHS\TVHS\Bus.ViewModels\bin\Debug\TVHS.ViewModels.pdb
+E:\TVHS\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.dll
+E:\TVHS\TVHS\Bus.ViewModels\obj\Debug\TVHS.ViewModels.pdb
