@@ -34,6 +34,11 @@ namespace TVHS.Services
             return Mapper.Map<List<Program>, List<ViewModelProgram>>(_iProgramRepository.All.ToList());
         }
 
+        public ViewModelProgram GetProgramByCode(string code)
+        {
+            return Mapper.Map<Program, ViewModelProgram>(_iProgramRepository.All.Where(x=>x.ProgramCode == code).FirstOrDefault());
+        }
+
         public void AddProgram(ViewModelProgram vProgram)
         {
             _iProgramRepository.InsertOrUpdate(Mapper.Map<ViewModelProgram, Program>(vProgram));
