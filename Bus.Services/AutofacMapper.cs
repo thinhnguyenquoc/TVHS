@@ -30,6 +30,7 @@ namespace TVHS.Services
             builder.RegisterType<ScheduleRepository>().As<IScheduleRepository>().InstancePerRequest();
             builder.RegisterType<TimeSettingRepository>().As<ITimeSettingRepository>().InstancePerRequest();
             builder.RegisterType<ProductRepository>().As<IProductRepository>().InstancePerRequest();
+            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerRequest();
             // service
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
             builder.RegisterType<ProgramService>().As<IProgramService>().InstancePerRequest();

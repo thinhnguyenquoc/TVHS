@@ -37,12 +37,14 @@
   <ItemGroup>
     <Compile Include="Level.cs" />
     <Compile Include="Mapping\LevelMap.cs" />
+    <Compile Include="Mapping\CategoryMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
     <Compile Include="Mapping\ProgramMap.cs" />
     <Compile Include="Mapping\SaleMap.cs" />
     <Compile Include="Mapping\ScheduleMap.cs" />
     <Compile Include="Mapping\TimeFrameMap.cs" />
     <Compile Include="Mapping\TimeSettingMap.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Sale.cs" />

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TVHS.Entities.Mapping
 {
-    public class ProductMap : EntityTypeConfiguration<Product>
+    public class CategoryMap : EntityTypeConfiguration<Category>
     {
-        public ProductMap()
+        public CategoryMap()
         {
-            this.ToTable("Product");
+            this.ToTable("Category");
             this.HasKey(x => x.Id);
             this.Property(x => x.Name).HasColumnName("Name");
             this.Property(x => x.ParentId).HasColumnName("ParentId");
