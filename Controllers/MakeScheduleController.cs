@@ -20,11 +20,28 @@ namespace TVHS.Web.Controllers
         }
 
          // GET: MakeSchedule
-        public ActionResult Index()
+        public ActionResult BroadcastSchedule(List<ViewModelCheckBox> list)
         {
-            List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().OrderByDescending(x=>x.Id).Skip(10).Take(10).ToList();
+            var choosenList = list.Where(x => x.Checked == true).Select(x=>x.Id).ToList();
+            List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().Where(x=>choosenList.Contains(x.Id)).ToList();
             var result = _iMakeScheduleService.makeSchedule(progamList);
             return View(result);
+        }
+
+        public ActionResult Index()
+        {
+            List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().ToList();
+            List<ViewModelCheckBox> model = new List<ViewModelCheckBox>();
+            foreach (var item in progamList)
+            {
+                var temp = new ViewModelCheckBox();
+                temp.Id = item.Id;
+                temp.ProgramCode = item.ProgramCode;
+                temp.Name = item.Name;
+                temp.Checked = false;
+                model.Add(temp);
+            }
+            return View(model);
         }
     }
 }

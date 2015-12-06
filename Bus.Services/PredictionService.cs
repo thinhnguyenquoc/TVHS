@@ -19,6 +19,11 @@ namespace TVHS.Services
         ICategoryRepository _iCategoryRepository;
         IProductRepository _iProductRepository;
         DateTime limitedDate;
+        List<Program> allPrograms;
+        List<Product> allProducts;
+        List<Category> allCategorys;
+        List<Sale> allSales;
+        List<Schedule> allSchedules;
         public PredictionService(IProgramRepository iProgramRepository,
             IProductRepository iProductRepository,
             IScheduleRepository iScheduleRepository, 
@@ -31,11 +36,16 @@ namespace TVHS.Services
             _iCategoryRepository = iCategoryRepository;
             _iProductRepository = iProductRepository;
             limitedDate = new DateTime(2015, 9, 1);
+            allPrograms = _iProgramRepository.All.ToList();
+            allProducts = _iProductRepository.All.ToList();
+            allCategorys = _iCategoryRepository.All.ToList();
+            allSales = _iSaleRepository.All.ToList();
+            allSchedules = _iScheduleRepository.All.ToList();
         }
 
         public bool CheckLive(string programCode)
         {
-            var program = _iProgramRepository.All.Where(x => x.ProgramCode == programCode).FirstOrDefault();
+            var program = allPrograms.Where(x => x.ProgramCode == programCode).FirstOrDefault();
             DateTime dateTime = DateTime.ParseExact(program.Duration, "h:m:s", CultureInfo.InvariantCulture);
             if (dateTime.Minute > 26)
             {
@@ -50,21 +60,20 @@ namespace TVHS.Services
 
         public int QuantityPredict(string programCode, int noTimes)
         {
-            var program = _iProgramRepository.All.Where(x => x.ProgramCode == programCode).FirstOrDefault();
-
+            var program = allPrograms.Where(x => x.ProgramCode == programCode).FirstOrDefault();
             var quantity = QuantityPredictByProgram(programCode, noTimes);
             if(quantity == -2)
                 return quantity;
             else if (quantity == -1)
             {
-                var programGroup = _iProgramRepository.All.Where(x => x.ProductId == program.ProductId).ToList<Program>();
+                var programGroup = allPrograms.Where(x => x.ProductId == program.ProductId).ToList<Program>();
                 // find other programs belong to one product
                 if (programGroup.Count() > 1)
                 {
                     foreach(var pro in programGroup){
                         if(pro.ProgramCode != programCode && (CheckLive(pro.ProgramCode) == CheckLive(programCode))){
                             var q = QuantityPredictByProgram(programCode, noTimes);
-                            if (q != -1 && q != -2 && q != 0)
+                            if (q != -1 && q != -2 )
                             {
                                 return q;
                             }
@@ -73,14 +82,14 @@ namespace TVHS.Services
                 }
                 // this product has only one program
                 //find other products have the same category with this product
-                var product = _iProductRepository.All.Where(x => x.Id == program.ProductId).FirstOrDefault();
-                var category = _iCategoryRepository.All.Where(x => x.Id == product.ParentId).FirstOrDefault();
+                var product = allProducts.Where(x => x.Id == program.ProductId).FirstOrDefault();
+                var category = allCategorys.Where(x => x.Id == product.ParentId).FirstOrDefault();
                 if(category == null)
                     return -1;
                 else
                 {
                     var q = recursiveCategory(category.Id, noTimes, CheckLive(programCode));
-                    if (q != -1 && q != -2 && q != 0)
+                    if (q != -1 && q != -2)
                     {
                         return q;
                     }
@@ -97,11 +106,11 @@ namespace TVHS.Services
         public int recursiveCategory(int categorytId, int noTimes, bool checklive)
         {
             var categoryLeafs = GetCategoryProduct(categorytId);
-            var category = _iCategoryRepository.All.Where(x => x.Id == categorytId).FirstOrDefault();
+            var category = allCategorys.Where(x => x.Id == categorytId).FirstOrDefault();
             foreach (var leaf in categoryLeafs)
             {
                 var q = QuantityPredictByCategoryProduct(leaf.Id, noTimes, checklive);
-                if (q != -1 && q != -2 && q != 0)
+                if (q != -1 && q != -2)
                 {
                     return q;
                 }
@@ -120,9 +129,9 @@ namespace TVHS.Services
         public List<Category> GetCategoryProduct(int categorytId)
         {
             var result = new List<Category>();
-            var category = _iCategoryRepository.All.Where(x => x.Id == categorytId).FirstOrDefault();
+            var category = allCategorys.Where(x => x.Id == categorytId).FirstOrDefault();
            
-            List<Category> children = _iCategoryRepository.All.Where(x => x.ParentId == categorytId).ToList();
+            List<Category> children = allCategorys.Where(x => x.ParentId == categorytId).ToList();
             if (children.Count() == 0)
             {
                 result.Add(category);
@@ -141,13 +150,13 @@ namespace TVHS.Services
 
         public int QuantityPredictByCategoryProduct(int categorytId, int noTimes, bool checklive)
         {
-            var productGroup = _iProductRepository.All.Where(x => x.ParentId == categorytId).ToList();
+            var productGroup = allProducts.Where(x => x.ParentId == categorytId).ToList();
             if (productGroup.Count() > 1)
             {
                 foreach (var prod in productGroup)
                 {                   
                     var q = QuantityPredictByProduct(prod.Id, noTimes, checklive);
-                    if (q != -1 && q != -2 && q != 0)
+                    if (q != -1 && q != -2)
                     {
                         return q;
                     }                   
@@ -158,7 +167,7 @@ namespace TVHS.Services
 
         public int QuantityPredictByProduct(int productId, int noTimes, bool checklive)
         {
-            var programGroup = _iProgramRepository.All.Where(x => x.ProductId == productId).ToList<Program>();
+            var programGroup = allPrograms.Where(x => x.ProductId == productId).ToList<Program>();
             // find other programs belong to one product
             if (programGroup.Count() > 0)
             {
@@ -167,7 +176,7 @@ namespace TVHS.Services
                     if (CheckLive(pro.ProgramCode) == checklive)
                     {
                         var q = QuantityPredictByProgram(pro.ProgramCode, noTimes);
-                        if (q != -1 && q != -2 && q != 0)
+                        if (q != -1 && q != -2)
                         {
                             return q;
                         }
@@ -179,10 +188,11 @@ namespace TVHS.Services
 
         public int QuantityPredictByProgram(string programCode, int noTimes)
         {
-            var program = _iProgramRepository.All.Where(x => x.ProgramCode == programCode).FirstOrDefault();
+            var program = allPrograms.Where(x => x.ProgramCode == programCode).FirstOrDefault();
             if (program != null)
             {
-                var scheduleDay = _iScheduleRepository.All.Where(x => x.ProgramCode == program.ProgramCode && x.Date.Year != 1 && x.Date < limitedDate).GroupBy(x => EntityFunctions.TruncateTime(x.Date)).ToList().Where(x => x.Count() == noTimes).ToList();
+                //var scheduleDay = allSchedules.Where(x => x.ProgramCode == program.ProgramCode && x.Date.Year != 1 && x.Date < limitedDate).GroupBy(x => EntityFunctions.TruncateTime(x.Date)).ToList().Where(x => x.Count() == noTimes).ToList();
+                var scheduleDay = allSchedules.Where(x => x.ProgramCode == program.ProgramCode && x.Date.Year != 1 && x.Date < limitedDate).GroupBy(x => x.Date.Date).ToList().Where(x => x.Count() == noTimes).ToList();               
                 // can not find any days when this program is showed noTimes
                 if (scheduleDay.Count() == 0)
                 {                    
@@ -194,7 +204,7 @@ namespace TVHS.Services
                     // find the day which is the closest today
                     var day = scheduleDay.OrderBy(x => x.Key).LastOrDefault().Key;
                     // get the quantity of the recent day
-                    var quan = _iSaleRepository.All.Where(x => x.ProductCode == program.ProductId && x.Date == day).FirstOrDefault();
+                    var quan = allSales.Where(x => x.ProductCode == program.ProductId && x.Date == day && x.Quantity != 0).FirstOrDefault();
                     if (quan != null)
                         return quan.Quantity;
                     else

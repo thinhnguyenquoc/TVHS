@@ -168,6 +168,7 @@
     <Content Include="Views\Prediction\Index.cshtml" />
     <Content Include="Views\Prediction\Predict.cshtml" />
     <Content Include="Views\MakeSchedule\Index.cshtml" />
+    <Content Include="Views\MakeSchedule\BroadcastSchedule.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
