@@ -15,5 +15,12 @@ namespace TVHS.ViewModels
         public string Duration { get; set; }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
+        public List<ViewModelQuantity> quantityList { get; set; } 
+    }
+
+    public class ViewModelQuantity
+    {
+        public int NoTimes {get;set;}
+        public int quantity {get; set;}
     }
 }

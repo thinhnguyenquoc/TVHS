@@ -1,0 +1,20 @@
+﻿@model List<TVHS.ViewModels.ViewModelProgram>
+
+@foreach (var item in Model)
+{
+    <br />
+    <label>Program Code:</label>
+    <label>@item.ProgramCode</label>
+    <br />
+    <label>Program Name:</label>
+    <label>@item.Name</label>
+    <br />
+    <label>Number of show times:</label>
+    <label>@item.quantityList.FirstOrDefault().NoTimes</label>
+    <br />
+    <label>Expected quantity:</label>
+    <label>@item.quantityList.FirstOrDefault().quantity (items)</label>
+    <label>**********************</label>
+    <br />
+    <br />
+}
