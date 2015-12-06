@@ -22,7 +22,7 @@ namespace TVHS.Web.Controllers
         public ActionResult Index()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-            List<ViewModelProgram> progamList = _iProgramService.GetAllProgram();
+            List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct();
             foreach (var prog in progamList) { 
                 items.Add(new SelectListItem { Text = prog.Name, Value = prog.ProgramCode });
             }

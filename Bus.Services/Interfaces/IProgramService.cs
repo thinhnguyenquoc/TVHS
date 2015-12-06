@@ -17,5 +17,6 @@ namespace TVHS.Services.Interfaces
         ViewModelProgram Delete(ViewModelProgram vprogram);
         void AddProgramFromFile(Stream inputStream, string fileName);
         ViewModelProgram GetProgramByCode(string code);
+        List<ViewModelProgram> GetAllProgramsHaveProduct();
     }
 }
