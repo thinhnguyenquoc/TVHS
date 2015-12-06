@@ -1,0 +1,28 @@
+﻿@model List<TVHS.ViewModels.ViewModelProgram>
+<br/>
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>No show times</th>
+        <th>Predicted quantity</th>
+    </tr>
+    @for (var i = 0; i < Model.ToList().Count(); i++)
+    {
+    <tr>
+        <td width="13%">
+            @Html.DisplayFor(it => it[i].ProgramCode)
+        </td>
+        <td width="60%">
+            @Html.DisplayFor(it => it[i].Name)
+        </td>
+        <td align="center" width="13%">
+            @Html.DisplayFor(it => it[i].quantityList.FirstOrDefault().NoTimes)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(it => it[i].quantityList.FirstOrDefault().quantity)
+        </td>
+    </tr>
+    }
+</table>
+
