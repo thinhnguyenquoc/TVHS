@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,11 +13,13 @@ namespace TVHS.Web.Controllers
     {       
         IProgramService _iProgramService;
         IMakeScheduleService _iMakeScheduleService;
+        IScheduleService _iScheduleService;
 
-        public MakeScheduleController(IProgramService iProgramService, IMakeScheduleService iMakeScheduleService)
+        public MakeScheduleController(IProgramService iProgramService, IMakeScheduleService iMakeScheduleService, IScheduleService iScheduleService)
         {
             _iProgramService = iProgramService;
             _iMakeScheduleService = iMakeScheduleService;
+            _iScheduleService = iScheduleService;
         }
 
          // GET: MakeSchedule
@@ -24,7 +27,9 @@ namespace TVHS.Web.Controllers
         {
             var choosenList = list.Where(x => x.Checked == true).Select(x=>x.Id).ToList();
             List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().Where(x=>choosenList.Contains(x.Id)).ToList();
-            var result = _iMakeScheduleService.makeSchedule(progamList);
+            var choosenList2 = _iScheduleService.GetAllSchedule().Where(x => x.Date < new DateTime(2015, 8, 30, 23, 59, 59) && x.Date > new DateTime(2015, 8, 30, 0, 0, 0)).Select(x => x.ProgramCode).Distinct().ToList();
+            List<ViewModelProgram> progamList2 = _iProgramService.GetAllProgramsHaveProduct().Where(x => choosenList2.Contains(x.ProgramCode)).ToList();
+            var result = _iMakeScheduleService.makeSchedule(progamList2);
             return View(result);
         }
 
