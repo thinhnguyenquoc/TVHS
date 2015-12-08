@@ -27,11 +27,20 @@ namespace TVHS.Web.Controllers
         {
             var choosenList = list.Where(x => x.Checked == true).Select(x=>x.Id).ToList();
             List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().Where(x=>choosenList.Contains(x.Id)).ToList();
-            var choosenList2 = _iScheduleService.GetAllSchedule().Where(x => x.Date < new DateTime(2015, 8, 30, 23, 59, 59) && x.Date > new DateTime(2015, 8, 30, 0, 0, 0)).Select(x => x.ProgramCode).Distinct().ToList();
-            List<ViewModelProgram> progamList2 = _iProgramService.GetAllProgramsHaveProduct().Where(x => choosenList2.Contains(x.ProgramCode)).ToList();
-            var result = _iMakeScheduleService.makeSchedule(progamList2);
+            var result = _iMakeScheduleService.makeSchedule(progamList);
             return View(result);
         }
+
+        //// GET: MakeSchedule
+        //public ActionResult BroadcastSchedule(List<ViewModelCheckBox> list)
+        //{
+        //    var choosenList = list.Where(x => x.Checked == true).Select(x => x.Id).ToList();
+        //    List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().Where(x => choosenList.Contains(x.Id)).ToList();
+        //    var choosenList2 = _iScheduleService.GetAllSchedule().Where(x => x.Date < new DateTime(2015, 8, 30, 23, 59, 59) && x.Date > new DateTime(2015, 8, 30, 0, 0, 0)).Select(x => x.ProgramCode).Distinct().ToList();
+        //    List<ViewModelProgram> progamList2 = _iProgramService.GetAllProgramsHaveProduct().Where(x => choosenList2.Contains(x.ProgramCode)).ToList();
+        //    var result = _iMakeScheduleService.makeSchedule(progamList2);
+        //    return View(result);
+        //}
 
         public ActionResult Index()
         {

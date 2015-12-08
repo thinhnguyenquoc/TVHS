@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Index";
+    List<TVHS.ViewModels.ViewModelProgram> progamList = ViewBag.originalProgram;
+    List<TVHS.ViewModels.ViewModelProgram> progamList2 = ViewBag.realProgram;
+    List<string> schedule = ViewBag.schedule;
+}
+<table class="table">
+    <tr>
+        <th>
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th>
+            Name
+        </th>             
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in progamList)
+    {
+        <tr>
+            <td>
+                @(progamList.IndexOf(item)+1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgramCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>        
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+           
+        </tr>
+    }
+</table>
+<p>Programs which product has quantity</p>
+<table class="table">
+    <tr>
+        <th>
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in progamList2)
+    {
+        <tr>
+            <td>
+                @(progamList2.IndexOf(item) + 1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgramCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+
+        </tr>
+    }
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in schedule)
+    {
+        <tr>
+            <td>
+                @(schedule.IndexOf(item) + 1)
+            </td>
+            <td>
+                @item
+            </td>          
+        </tr>
+    }
+</table>
+

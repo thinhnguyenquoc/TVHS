@@ -133,6 +133,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutofacConfig.cs" />
+    <Compile Include="Controllers\CaseStudyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MakeScheduleController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -169,6 +170,7 @@
     <Content Include="Views\Prediction\Predict.cshtml" />
     <Content Include="Views\MakeSchedule\Index.cshtml" />
     <Content Include="Views\MakeSchedule\BroadcastSchedule.cshtml" />
+    <Content Include="Views\CaseStudy\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
