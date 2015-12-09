@@ -22,11 +22,18 @@ namespace TVHS.Services
         IProgramRepository _iProgramRepository;
         IHelper _iHelper;
         IProductRepository _iProductRepository;
-        public ProgramService(IProgramRepository iProgramRepository, IHelper iHelper, IProductRepository iProductRepository)
+        ISaleRepository _iSaleRepository;
+        IScheduleRepository _iScheduleRepository;
+        public ProgramService(IProgramRepository iProgramRepository, IHelper iHelper, 
+            IProductRepository iProductRepository,
+            ISaleRepository iSaleRepository,
+            IScheduleRepository iScheduleRepository)
         {
             _iProgramRepository = iProgramRepository;
             _iHelper = iHelper;
             _iProductRepository = iProductRepository;
+            _iSaleRepository = iSaleRepository;
+            _iScheduleRepository = iScheduleRepository;
         }
         
         public List<ViewModelProgram> GetAllProgram()
@@ -37,6 +44,51 @@ namespace TVHS.Services
         public List<ViewModelProgram> GetAllProgramsHaveProduct()
         {
             return Mapper.Map<List<Program>, List<ViewModelProgram>>(_iProgramRepository.All.Where(x=>x.ProductId != 0).ToList());
+        }
+
+        public List<ViewModelProgram> GetAllProgramsHaveQuantity(DateTime limitDate)
+        {
+            var result = new List<ViewModelProgram>();
+            List< ViewModelProgram > programsHaveProduct = GetAllProgramsHaveProduct();
+            if (programsHaveProduct.Count() != 0)
+            {
+                foreach (var item in programsHaveProduct)
+                {
+                    var sale = _iSaleRepository.All.Where(x => x.ProductCode == item.ProductId && x.Date < limitDate).FirstOrDefault();
+                    if (sale != null && sale.Quantity != 0)
+                    {
+                        result.Add(item);
+                    }
+                }
+            }
+            return result;
+        }
+
+        public List<ViewModelProgram> GetProgramQuantity(List<ViewModelProgram> programList, DateTime date)
+        {
+            var result = new List<ViewModelProgram>();
+            if (programList.Count() != 0)
+            {
+               
+                foreach (var item in programList)
+                {
+                    List<Schedule> scheduleList = _iScheduleRepository.All.Where(x=>x.ProgramCode == item.ProgramCode).ToList().Where(x => x.Date.Date == date.Date).ToList();
+                    var sale = _iSaleRepository.All.Where(x => x.ProductCode == item.ProductId).ToList().Where(x=>x.Date.Date == date.Date).FirstOrDefault();
+                    if (sale != null)
+                    {
+                        
+                        var temp = item;
+                        temp.quantityList = new List<ViewModelQuantity>(){
+                            new ViewModelQuantity(){
+                                NoTimes = scheduleList.Count() ,
+                                quantity = sale.Quantity
+                            }
+                        };
+                        result.Add(temp);
+                    }
+                }
+            }
+            return result;
         }
 
 

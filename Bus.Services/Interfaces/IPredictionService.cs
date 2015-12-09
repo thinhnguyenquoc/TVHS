@@ -8,6 +8,6 @@ namespace TVHS.Services.Interfaces
 {
     public interface IPredictionService
     {
-        int QuantityPredict(string programCode, int timesFrame);
+        int QuantityPredict(string programCode, int timesFrame, DateTime time);
     }
 }

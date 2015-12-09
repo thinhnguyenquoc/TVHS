@@ -18,7 +18,6 @@ namespace TVHS.Services
         ISaleRepository _iSaleRepository;
         ICategoryRepository _iCategoryRepository;
         IProductRepository _iProductRepository;
-        DateTime limitedDate;
         List<Program> allPrograms;
         List<Product> allProducts;
         List<Category> allCategorys;
@@ -35,7 +34,6 @@ namespace TVHS.Services
             _iSaleRepository = iSaleRepository;
             _iCategoryRepository = iCategoryRepository;
             _iProductRepository = iProductRepository;
-            limitedDate = new DateTime(2015, 9, 1);
             allPrograms = _iProgramRepository.All.ToList();
             allProducts = _iProductRepository.All.ToList();
             allCategorys = _iCategoryRepository.All.ToList();
@@ -58,10 +56,10 @@ namespace TVHS.Services
             return false;
         }
 
-        public int QuantityPredict(string programCode, int noTimes)
+        public int QuantityPredict(string programCode, int noTimes, DateTime limitedDate)
         {
             var program = allPrograms.Where(x => x.ProgramCode == programCode).FirstOrDefault();
-            var quantity = QuantityPredictByProgram(programCode, noTimes);
+            var quantity = QuantityPredictByProgram(programCode, noTimes, limitedDate);
             if(quantity == -2)
                 return quantity;
             else if (quantity == -1)
@@ -72,7 +70,7 @@ namespace TVHS.Services
                 {
                     foreach(var pro in programGroup){
                         if(pro.ProgramCode != programCode && (CheckLive(pro.ProgramCode) == CheckLive(programCode))){
-                            var q = QuantityPredictByProgram(programCode, noTimes);
+                            var q = QuantityPredictByProgram(programCode, noTimes, limitedDate);
                             if (q != -1 && q != -2 )
                             {
                                 return q;
@@ -88,7 +86,7 @@ namespace TVHS.Services
                     return -1;
                 else
                 {
-                    var q = recursiveCategory(category.Id, noTimes, CheckLive(programCode));
+                    var q = recursiveCategory(category.Id, noTimes, CheckLive(programCode), limitedDate);
                     if (q != -1 && q != -2)
                     {
                         return q;
@@ -103,13 +101,13 @@ namespace TVHS.Services
 
         }
 
-        public int recursiveCategory(int categorytId, int noTimes, bool checklive)
+        public int recursiveCategory(int categorytId, int noTimes, bool checklive, DateTime limitedDate)
         {
             var categoryLeafs = GetCategoryProduct(categorytId);
             var category = allCategorys.Where(x => x.Id == categorytId).FirstOrDefault();
             foreach (var leaf in categoryLeafs)
             {
-                var q = QuantityPredictByCategoryProduct(leaf.Id, noTimes, checklive);
+                var q = QuantityPredictByCategoryProduct(leaf.Id, noTimes, checklive, limitedDate);
                 if (q != -1 && q != -2)
                 {
                     return q;
@@ -117,7 +115,7 @@ namespace TVHS.Services
             }
             if (category.ParentId != null)
             {
-                return recursiveCategory(category.ParentId.Value, noTimes, checklive);
+                return recursiveCategory(category.ParentId.Value, noTimes, checklive, limitedDate);
             }
             else
             {
@@ -148,14 +146,14 @@ namespace TVHS.Services
             }
         }
 
-        public int QuantityPredictByCategoryProduct(int categorytId, int noTimes, bool checklive)
+        public int QuantityPredictByCategoryProduct(int categorytId, int noTimes, bool checklive, DateTime limitedDate)
         {
             var productGroup = allProducts.Where(x => x.ParentId == categorytId).ToList();
             if (productGroup.Count() > 1)
             {
                 foreach (var prod in productGroup)
                 {                   
-                    var q = QuantityPredictByProduct(prod.Id, noTimes, checklive);
+                    var q = QuantityPredictByProduct(prod.Id, noTimes, checklive, limitedDate);
                     if (q != -1 && q != -2)
                     {
                         return q;
@@ -165,7 +163,7 @@ namespace TVHS.Services
             return -1;
         }
 
-        public int QuantityPredictByProduct(int productId, int noTimes, bool checklive)
+        public int QuantityPredictByProduct(int productId, int noTimes, bool checklive, DateTime limitedDate)
         {
             var programGroup = allPrograms.Where(x => x.ProductId == productId).ToList<Program>();
             // find other programs belong to one product
@@ -175,7 +173,7 @@ namespace TVHS.Services
                 {
                     if (CheckLive(pro.ProgramCode) == checklive)
                     {
-                        var q = QuantityPredictByProgram(pro.ProgramCode, noTimes);
+                        var q = QuantityPredictByProgram(pro.ProgramCode, noTimes, limitedDate);
                         if (q != -1 && q != -2)
                         {
                             return q;
@@ -186,7 +184,7 @@ namespace TVHS.Services
             return -1;
         }
 
-        public int QuantityPredictByProgram(string programCode, int noTimes)
+        public int QuantityPredictByProgram(string programCode, int noTimes, DateTime limitedDate)
         {
             var program = allPrograms.Where(x => x.ProgramCode == programCode).FirstOrDefault();
             if (program != null)

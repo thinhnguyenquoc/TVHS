@@ -17,7 +17,7 @@ namespace TVHS.Services
             _iPredictionService = iPredictionService;
         }
 
-        public List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist)
+        public List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist, int hours, DateTime limitedDate)
         {
             foreach (var item in programlist)
             {
@@ -26,11 +26,11 @@ namespace TVHS.Services
                 {
                     ViewModelQuantity quantity = new ViewModelQuantity();
                     quantity.NoTimes = i + 1;
-                    quantity.quantity = _iPredictionService.QuantityPredict(item.ProgramCode, i+1);
+                    quantity.quantity = _iPredictionService.QuantityPredict(item.ProgramCode, i + 1, limitedDate);
                     item.quantityList.Add(quantity);
                 }
             }
-            DateTime totaltime = new DateTime(2015, 9, 1, 10, 0, 0);
+            DateTime totaltime = new DateTime(2015, 9, 1, hours, 59, 59);
             //List<ViewModelProgram> result = FindMaxQuantity(programlist);
             var result = randomAlgrithm(programlist, totaltime);
             return result;
@@ -38,7 +38,8 @@ namespace TVHS.Services
 
         public List<ViewModelProgram> randomAlgrithm(List<ViewModelProgram> programlist, DateTime totaltime)
         {
-            while (true) { 
+            while (true) {
+                //Guid seed = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e");
                 Random a = new Random();
 
                 List<ViewModelProgram> result = new List<ViewModelProgram>();
@@ -61,12 +62,30 @@ namespace TVHS.Services
                     totalminute = dateTime.Minute * no;
                 }
 
-                if (totalminute < totaltime.Hour * 60)
+                if (totalminute < totaltime.Hour * 60 + totaltime.Minute + 1)
                 {
-                    return result;
+                    if (checkValidResult(result))
+                    {
+                        return result;
+                    }
                 }
             }
 
+        }
+
+        public bool checkValidResult(List<ViewModelProgram> programlist)
+        {
+            foreach (var pro in programlist)
+            {
+                foreach (var index in pro.quantityList)
+                {
+                   if(index.quantity == -1 || index.quantity == -2)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         public List<ViewModelProgram> FindMaxQuantity(List<ViewModelProgram> programlist)

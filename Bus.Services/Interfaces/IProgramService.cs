@@ -18,5 +18,7 @@ namespace TVHS.Services.Interfaces
         void AddProgramFromFile(Stream inputStream, string fileName);
         ViewModelProgram GetProgramByCode(string code);
         List<ViewModelProgram> GetAllProgramsHaveProduct();
+        List<ViewModelProgram> GetAllProgramsHaveQuantity(DateTime limitDate);
+        List<ViewModelProgram> GetProgramQuantity(List<ViewModelProgram> programList, DateTime date);
     }
 }

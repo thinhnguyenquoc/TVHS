@@ -42,7 +42,7 @@ namespace TVHS.Web.Controllers
         {
             var program = _iProgramService.GetProgramByCode(programCode);
             int noTimes = Convert.ToInt32(timeFrames);
-            int result = _iPredictionService.QuantityPredict(programCode, noTimes);
+            int result = _iPredictionService.QuantityPredict(programCode, noTimes, new DateTime(2015, 8, 30));
             ViewBag.expectedResult = result;
             ViewBag.timeFrames = timeFrames;
             return View(program);
