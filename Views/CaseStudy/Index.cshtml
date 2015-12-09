@@ -7,58 +7,21 @@
     List<TVHS.ViewModels.ViewModelProgram> progamList2next = ViewBag.realProgramnext;
 
     List<TVHS.ViewModels.ViewModelProgram> predictResult = ViewBag.predictResult;
-    List<TVHS.ViewModels.ViewModelProgram> realResult = ViewBag.realresult ;
+    List<TVHS.ViewModels.ViewModelProgram> realResult = ViewBag.realresult;
 
     List<TVHS.ViewModels.ViewModelProgram> compare = ViewBag.compare;
 }
 <br />
-<p>Date: 30/08/2015</p>
+<h3>Date: 30/08/2015</h3>
 <table class="table">
     <tr>
-        <th>
+        <th width="5%">
             No
         </th>
         <th>
             Program Code
         </th>
-        <th>
-            Name
-        </th>             
-        <th>
-            Duration
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in progamList)
-    {
-        <tr>
-            <td>
-                @(progamList.IndexOf(item)+1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgramCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>        
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-           
-        </tr>
-    }
-</table>
-<p>Programs which product has quantity</p>
-<table class="table">
-    <tr>
-        <th>
-            No
-        </th>
-        <th>
-            Program Code
-        </th>
-        <th>
+        <th width="65%">
             Name
         </th>
         <th>
@@ -66,186 +29,219 @@
         </th>
         <th></th>
     </tr>
-
-    @foreach (var item in progamList2)
-    {
-        <tr>
-            <td>
-                @(progamList2.IndexOf(item) + 1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgramCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-
-        </tr>
-    }
 </table>
+<div style="height:400px; overflow-y:scroll; display:block; width:100%">
+    <table class="table">
+        @foreach (var item in progamList)
+        {
+            <tr>
+                <td>
+                    @(progamList.IndexOf(item) + 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgramCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
 
-<p>Date: 31/08/2015</p>
-<table class="table">
-    <tr>
-        <th>
-            No
-        </th>
-        <th>
-            Program Code
-        </th>
-        <th>
-            Name
-        </th>             
-        <th>
-            Duration
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in progamListnext)
-    {
-        <tr>
-            <td>
-                @(progamListnext.IndexOf(item)+1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgramCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>        
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-           
-        </tr>
-    }
-</table>
-<p>Programs which product has quantity</p>
-<table class="table">
-    <tr>
-        <th>
-            No
-        </th>
-        <th>
-            Program Code
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Duration
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in progamList2next)
-    {
-        <tr>
-            <td>
-                @(progamList2next.IndexOf(item) + 1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgramCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-
-        </tr>
-    }
-</table>
-
-<p>Result of prediction on 31/08/2015</p>
-<table>
-    <tr>
-        <th>Code</th>
-        <th>Name</th>
-        <th>No show times</th>
-        <th>Predicted quantity</th>
-    </tr>
-    @for (var i = 0; i < predictResult.Count(); i++)
-    {
-    <tr>
-        <td width="13%">
-            @predictResult[i].ProgramCode
-        </td>
-        <td width="60%">
-            @predictResult[i].Name
-        </td>
-        <td align="center" width="13%">
-            @predictResult[i].quantityList.FirstOrDefault().NoTimes
-        </td>
-        <td align="center">
-            @predictResult[i].quantityList.FirstOrDefault().quantity
-        </td>
-    </tr>
-    }
-</table>
+            </tr>
+        }
+    </table>
+</div>
 <br />
-<p>real quantitys</p>
+<h3>Programs which product has quantity</h3>
+<table class="table">
+    <tr>
+        <th width="5%">
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th width="65%">
+            Name
+        </th>
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+</table>
+<div style="height:400px; overflow-y:scroll; display:block; width:100%">
+    <table class="table">
+        @foreach (var item in progamList2)
+        {
+            <tr>
+                <td>
+                    @(progamList2.IndexOf(item) + 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgramCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<h3>Date: 31/08/2015</h3>
+<table class="table">
+    <tr>
+        <th width="5%">
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th width="65%">
+            Name
+        </th>
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+</table>
+<div style="height:400px; overflow-y:scroll; display:block; width:100%">
+    <table class="table">
+        @foreach (var item in progamListnext)
+        {
+            <tr>
+                <td>
+                    @(progamListnext.IndexOf(item) + 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgramCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<h3>Programs which product has quantity</h3>
+<table class="table">
+    <tr>
+        <th width="5%">
+            No
+        </th>
+        <th>
+            Program Code
+        </th>
+        <th width="65%">
+            Name
+        </th>
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+</table>
+<div style="height:400px; overflow-y:scroll; display:block; width:100%">
+    <table class="table">
+        @foreach (var item in progamList2next)
+        {
+            <tr>
+                <td>
+                    @(progamList2next.IndexOf(item) + 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgramCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<h3>Result of prediction and real quantitys on 31/08/2015</h3>
 <table>
     <tr>
         <th>Code</th>
         <th>Name</th>
-        <th>No show times</th>
-        <th>Predicted quantity</th>
+        <th width="10%">No show times</th>
+        <th width="10%">Predicted quantity</th>
+        <th width="10%">Real no show times</th>
+        <th width="10%">Real quantity</th>
     </tr>
     @for (var i = 0; i < realResult.Count(); i++)
     {
-    <tr>
-        <td width="13%">
-            @realResult[i].ProgramCode
-        </td>
-        <td width="60%">
-            @realResult[i].Name
-        </td>
-        <td align="center" width="13%">
-            @realResult[i].quantityList.FirstOrDefault().NoTimes
-        </td>
-        <td align="center">
-            @realResult[i].quantityList.FirstOrDefault().quantity
-        </td>
-    </tr>
+        <tr>
+            <td width="10%">
+                @realResult[i].ProgramCode
+            </td>
+            <td width="50%">
+                @realResult[i].Name
+            </td>
+            <td align="center" width="10%">
+                @predictResult[i].quantityList.FirstOrDefault().NoTimes
+            </td>
+            <td align="center">
+                @predictResult[i].quantityList.FirstOrDefault().quantity
+            </td>
+            <td align="center" width="10%">
+                @realResult[i].quantityList.FirstOrDefault().NoTimes
+            </td>
+            <td align="center">
+                @realResult[i].quantityList.FirstOrDefault().quantity
+            </td>
+        </tr>
     }
 </table>
-<p>Comparing Result</p>
+<br />
+<h3>Comparing Result</h3>
 <table>
     <tr>
         <th>Code</th>
         <th>Name</th>
-        <th>No show times</th>
-        <th>Quantity Error</th>
-        <th>Predicted Quantity</th>
-        <th>Real Quantity</th>
+        <th width="10%">No show times</th>
+        <th width="10%">Quantity Error</th>
+        <th width="10%">Predicted Quantity</th>
+        <th width="10%">Real Quantity</th>
     </tr>
     @for (var i = 0; i < compare.Count(); i++)
     {
-    <tr>
-        <td width="13%">
-            @compare[i].ProgramCode
-        </td>
-        <td width="60%">
-            @compare[i].Name
-        </td>
-        <td align="center" width="13%">
-            @compare[i].quantityList.FirstOrDefault().NoTimes
-        </td>
-        <td align="center">
-            @compare[i].quantityList.FirstOrDefault().quantity
-        </td>
-        <td align="center">
-            @compare[i].quantityList[1].quantity
-        </td>
-        <td align="center">
-            @compare[i].quantityList[2].quantity
-        </td>
-    </tr>
+        <tr>
+            <td width="10%">
+                @compare[i].ProgramCode
+            </td>
+            <td width="50%">
+                @compare[i].Name
+            </td>
+            <td align="center" width="10%">
+                @compare[i].quantityList.FirstOrDefault().NoTimes
+            </td>
+            <td align="center">
+                @compare[i].quantityList.FirstOrDefault().quantity
+            </td>
+            <td align="center">
+                @compare[i].quantityList[1].quantity
+            </td>
+            <td align="center">
+                @compare[i].quantityList[2].quantity
+            </td>
+        </tr>
     }
 </table>
