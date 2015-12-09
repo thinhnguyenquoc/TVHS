@@ -38,7 +38,7 @@ namespace TVHS.Web.Controllers
             ViewBag.originalProgramnext = progamList1next;
 
             // predict 31/08/2015
-            var result = _iMakeScheduleService.makeSchedule(progamList2next, 12, new DateTime(2015, 8, 31));
+            var result = _iMakeScheduleService.makeSchedule(progamList2next, new DateTime(2015, 8, 31, 10, 30, 0), new DateTime(2015, 8, 31));
             ViewBag.predictResult = result;
 
             // real result 31/08/2015
@@ -67,6 +67,10 @@ namespace TVHS.Web.Controllers
                 }
             }
             ViewBag.compare = compare;
+
+            // use the total real schedule to predict
+ 
+
             return View();
         }       
     }

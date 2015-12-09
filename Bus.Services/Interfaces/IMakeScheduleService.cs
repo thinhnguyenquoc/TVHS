@@ -9,6 +9,6 @@ namespace TVHS.Services.Interfaces
 {
     public interface IMakeScheduleService
     {
-        List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist, int hours, DateTime limitedDate);
+        List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist, DateTime hours, DateTime limitedDate);
     }
 }

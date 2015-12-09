@@ -17,7 +17,7 @@ namespace TVHS.Services
             _iPredictionService = iPredictionService;
         }
 
-        public List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist, int hours, DateTime limitedDate)
+        public List<ViewModelProgram> makeSchedule(List<ViewModelProgram> programlist, DateTime hours, DateTime limitedDate)
         {
             foreach (var item in programlist)
             {
@@ -30,7 +30,7 @@ namespace TVHS.Services
                     item.quantityList.Add(quantity);
                 }
             }
-            DateTime totaltime = new DateTime(2015, 9, 1, hours, 59, 59);
+            DateTime totaltime = hours;
             //List<ViewModelProgram> result = FindMaxQuantity(programlist);
             var result = randomAlgrithm(programlist, totaltime);
             return result;

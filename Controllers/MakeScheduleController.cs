@@ -27,7 +27,7 @@ namespace TVHS.Web.Controllers
         {
             var choosenList = list.Where(x => x.Checked == true).Select(x=>x.Id).ToList();
             List<ViewModelProgram> progamList = _iProgramService.GetAllProgramsHaveProduct().Where(x=>choosenList.Contains(x.Id)).ToList();
-            var result = _iMakeScheduleService.makeSchedule(progamList, 9, new DateTime(2015,9,1));
+            var result = _iMakeScheduleService.makeSchedule(progamList, new DateTime(2015, 9, 1 , 9,0,0), new DateTime(2015, 9, 1));
             return View(result);
         }
 
