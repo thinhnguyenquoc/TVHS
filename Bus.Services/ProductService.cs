@@ -21,17 +21,26 @@ namespace TVHS.Services
     {
         IProductRepository _iProductRepository;
         IProgramRepository _iProgramRepository;
+        ICategoryRepository _iCategoryRepository;
         IHelper _iHelper;
-        public ProductService(IProductRepository iProductRepository, IHelper iHelper, IProgramRepository iProgramRepository)
+        public ProductService(IProductRepository iProductRepository, IHelper iHelper, IProgramRepository iProgramRepository,
+            ICategoryRepository iCategoryRepository)
         {
             _iProductRepository = iProductRepository;
             _iHelper = iHelper;
             _iProgramRepository = iProgramRepository;
+            _iCategoryRepository = iCategoryRepository;
         }
         
         public List<ViewModelProduct> GetAllProduct()
         {
-            return Mapper.Map<List<Product>, List<ViewModelProduct>>(_iProductRepository.All.ToList());
+            List<ViewModelProduct> productList = Mapper.Map<List<Product>, List<ViewModelProduct>>(_iProductRepository.All.ToList());
+            foreach(var i in productList){
+                var cate = _iCategoryRepository.Find(i.Id);
+                if(cate != null)
+                    i.ParentName = cate.Name;
+            }
+            return productList;
         }
 
         public void AddProduct(ViewModelProduct vproduct)
