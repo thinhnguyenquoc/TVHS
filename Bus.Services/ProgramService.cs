@@ -185,9 +185,8 @@ namespace TVHS.Services
                                         program.Duration = row.GetCell(index + 2) != null ? "0:" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Minute.ToString() + ":" + Convert.ToDateTime(row.GetCell(index + 2).DateCellValue.ToString()).Second.ToString() : "";                                
                                         program.ProgramCode = row.GetCell(index + 3).StringCellValue.ToString();
                                         program.Note = row.GetCell(index + 4) != null ? row.GetCell(index + 4).StringCellValue.ToString() : "";                                    
-                                        // add more
-                                        program.Category = row.GetCell(index + 7) != null ? row.GetCell(index + 7).StringCellValue.ToString() : "";                                     
-                                        program.Price = row.GetCell(index + 8) != null ? Convert.ToInt32(row.GetCell(index + 8).NumericCellValue.ToString()) : 0;                                      
+                                        // add more                                    
+                                        program.Price = row.GetCell(index + 7) != null ? Convert.ToInt32(row.GetCell(index + 7).NumericCellValue.ToString()) : 0;                                      
                                     }                                   
                                     var existProgram = _iProgramRepository.All.Where(x => x.ProgramCode == program.ProgramCode).FirstOrDefault();
                                     if (existProgram != null)
