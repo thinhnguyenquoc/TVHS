@@ -21,10 +21,12 @@ namespace TVHS.Services
     {
         IScheduleRepository _iScheduleRepository;
         IHelper _iHelper;
-        public ScheduleService(IScheduleRepository iScheduleRepository, IHelper iHelper)
+        ICycleRepository _iCycleRepository;
+        public ScheduleService(IScheduleRepository iScheduleRepository, IHelper iHelper, ICycleRepository iCycleRepository)
         {
             _iScheduleRepository = iScheduleRepository;
             _iHelper = iHelper;
+            _iCycleRepository = iCycleRepository;
         }
         
         public List<ViewModelSchedule> GetAllSchedule()
@@ -101,6 +103,12 @@ namespace TVHS.Services
                         var startDay = listTime.FirstOrDefault();
                         var lastDay = listTime.LastOrDefault();
                         var startPoint = _iHelper.StartPoint(sheet, headerRowKey);
+                        _iCycleRepository.InsertOrUpdate(new Cycle()
+                        {
+                            Begin = startDay,
+                            End = lastDay
+                        });
+                        _iCycleRepository.Save();
                         while (startDay <= lastDay)
                         {
                             // add data

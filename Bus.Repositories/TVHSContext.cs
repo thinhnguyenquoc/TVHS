@@ -31,6 +31,7 @@ namespace TVHS.Repositories
         public DbSet<Product> Products { get; set; }
         public DbSet<TimeFrame> TimeFrames { get; set; }
         public DbSet<Category> Categorys { get; set; }
+        public DbSet<Cycle> Cycles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -42,6 +43,7 @@ namespace TVHS.Repositories
             modelBuilder.Configurations.Add(new ProductMap());
             modelBuilder.Configurations.Add(new TimeFrameMap());
             modelBuilder.Configurations.Add(new CategoryMap());
+            modelBuilder.Configurations.Add(new CycleMap());
         }
     }
 }
