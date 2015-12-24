@@ -185,3 +185,10 @@ E:\TVHS\TVHS\bin\NPOI.OpenXml4Net.xml
 E:\TVHS\TVHS\obj\Debug\TVHS.Web.csprojResolveAssemblyReference.cache
 E:\TVHS\TVHS\obj\Debug\TVHS.Web.dll
 E:\TVHS\TVHS\obj\Debug\TVHS.Web.pdb
+D:\git\TVHS\bin\Antlr3.Runtime.dll
+D:\git\TVHS\bin\Newtonsoft.Json.dll
+D:\git\TVHS\bin\System.Web.Optimization.dll
+D:\git\TVHS\bin\WebGrease.dll
+D:\git\TVHS\bin\Antlr3.Runtime.pdb
+D:\git\TVHS\bin\Newtonsoft.Json.xml
+D:\git\TVHS\bin\System.Web.Optimization.xml

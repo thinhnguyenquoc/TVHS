@@ -1,0 +1,88 @@
+﻿@model List<TVHS.ViewModels.ViewModelCategory>
+@{
+    int RootId = -1;
+    for(int i =0 ; i < Model.Count(); i++){
+        if(Model[i].ParentId == null){
+            RootId = i;
+            break;
+        }   
+    }
+}
+
+<style>
+    .tree { background-color:#2C3E50; color:#46CFB0;}
+    .tree li,
+    .tree li > a,
+    .tree li > span {
+        padding: 4pt;
+        border-radius: 4px;
+    }
+
+    .tree li a {
+       color:#46CFB0;
+        text-decoration: none;
+        line-height: 20pt;
+        border-radius: 4px;
+    }
+
+    .tree li a:hover {
+        background-color: #34BC9D;
+        color: #fff;
+    }
+
+    .active {
+        background-color: #34495E;
+        color: white;
+    }
+
+    .active a {
+        color: #fff;
+    }
+
+    .tree li a.active:hover {
+        background-color: #34BC9D;
+    }
+</style>
+@Styles.Render("~/Content/jquery.treemenu.css")
+@Scripts.Render("~/Scripts/jquery.treemenu.js")
+
+@helper TreeView(List<TVHS.ViewModels.ViewModelCategory> tree, int rootId)
+    {
+        int k = -1;
+        for (int i = 0; i < Model.Count(); i++)
+        {
+            if (Model[i].ParentId == Model[rootId].Id)
+            {
+                k = i;
+            }
+        }
+        //leaf
+        <li>
+        @if (k == -1){
+            <a href="#">@Model[rootId].Name</a>                    
+        }
+        else{
+            <a href="#">@Model[rootId].Name</a>
+            for (int i = 0; i < Model.Count(); i++)
+            {
+                if (Model[i].ParentId == Model[rootId].Id)
+                {                       
+                <ul>
+                    @TreeView(tree, i)
+                </ul>
+                }
+            }
+        }
+        </li>
+                
+ 
+}
+<ul id="chapterFolders" class="tree">
+    @TreeView(Model, RootId)
+</ul>
+ 
+<script>
+ $(document).ready(function(){
+        $(".tree").treemenu({delay:300}).openActive();
+    });
+</script>

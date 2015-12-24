@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - TVHS</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Scripts.Render("~/Scripts/modernizr-2.6.2.js")
+    @Scripts.Render("~/Scripts/jquery-1.11.2.min.js");
+    @Scripts.Render("~/Scripts/bootstrap.min.js");
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -33,8 +35,6 @@
             <p>&copy; @DateTime.Now.Year - nqt900</p>
         </footer>
     </div>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    
 </body>
 </html>

@@ -37,6 +37,8 @@ namespace TVHS.Services
             Mapper.CreateMap<ViewModelTimeFrame, TimeFrame>();
             Mapper.CreateMap<ViewModelCycle, Cycle>();
             Mapper.CreateMap<Cycle, ViewModelCycle>();
+            Mapper.CreateMap<Category, ViewModelCategory>();
+            Mapper.CreateMap<ViewModelCategory, Category>();
             mappingConfigured = true;
         }
 

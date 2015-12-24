@@ -40,6 +40,7 @@ namespace TVHS.Services
             builder.RegisterType<Helper>().As<IHelper>().InstancePerRequest();
             builder.RegisterType<PredictionService>().As<IPredictionService>().InstancePerRequest();
             builder.RegisterType<MakeScheduleService>().As<IMakeScheduleService>().InstancePerRequest();
+            builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerRequest();
             base.Load(builder);
         }
     }

@@ -36,7 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AutofacMapper.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="Interfaces\ICategoryService.cs" />
     <Compile Include="Interfaces\IHelper.cs" />
     <Compile Include="Interfaces\IMakeScheduleService.cs" />
     <Compile Include="Interfaces\IPredictionService.cs" />

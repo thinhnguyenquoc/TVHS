@@ -35,6 +35,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ViewModelCategory.cs" />
     <Compile Include="ViewModelCycle.cs" />
     <Compile Include="ViewModelCheckBox.cs" />
     <Compile Include="ViewModelLevel.cs" />
