@@ -192,3 +192,10 @@ D:\git\TVHS\bin\WebGrease.dll
 D:\git\TVHS\bin\Antlr3.Runtime.pdb
 D:\git\TVHS\bin\Newtonsoft.Json.xml
 D:\git\TVHS\bin\System.Web.Optimization.xml
+E:\TVHS\TVHS\bin\Antlr3.Runtime.dll
+E:\TVHS\TVHS\bin\Newtonsoft.Json.dll
+E:\TVHS\TVHS\bin\System.Web.Optimization.dll
+E:\TVHS\TVHS\bin\WebGrease.dll
+E:\TVHS\TVHS\bin\Antlr3.Runtime.pdb
+E:\TVHS\TVHS\bin\Newtonsoft.Json.xml
+E:\TVHS\TVHS\bin\System.Web.Optimization.xml

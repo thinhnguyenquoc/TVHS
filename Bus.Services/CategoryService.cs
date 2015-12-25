@@ -65,8 +65,22 @@ namespace TVHS.Services
         {
             try
             {
-                _iCategoryRepository.Delete(vCategory.Id);
-                _iCategoryRepository.Save();
+                var thisCate = _iCategoryRepository.Find(vCategory.Id);
+                if (thisCate != null)
+                {
+                    if (thisCate.ParentId != null)
+                    {
+                        var allChildren = _iCategoryRepository.All.Where(x => x.ParentId == vCategory.Id).ToList();
+                        foreach (var i in allChildren)
+                        {
+                            i.ParentId = thisCate.ParentId;
+                            _iCategoryRepository.InsertOrUpdate(i);
+                        }
+                        _iCategoryRepository.Save();
+                    }
+                    _iCategoryRepository.Delete(vCategory.Id);
+                    _iCategoryRepository.Save();
+                }
                 return vCategory;
             }
             catch (Exception e)

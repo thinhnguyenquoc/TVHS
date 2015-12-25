@@ -59,5 +59,28 @@ namespace TVHS.Web.Controllers
                 }
             }
         }
+
+        [HttpPost]
+        public ActionResult AddChildNode(ViewModelCategory vm)
+        {
+            _iCategoryService.InsertOrUpdate(vm);
+            return Json("Succeed!",JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteNode(ViewModelCategory vm)
+        {
+            _iCategoryService.Delete(vm);
+            return Json("Succeed!", JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult RetrieveNode(ViewModelCategory vm)
+        {
+            var current = _iCategoryService.GetDetail(vm.Id);
+            vm.ParentId = current.ParentId;
+            _iCategoryService.InsertOrUpdate(vm);
+            return Json("Succeed!", JsonRequestBehavior.AllowGet);
+        }
 	}
 }
